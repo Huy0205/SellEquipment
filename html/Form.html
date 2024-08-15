@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tài khoản</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../font/css/all.min.css">
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/regexForm.js"></script>
+    <script src="../js/changeForm.js"></script>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-md bg-info justify-content-around p-0">
+        <a href="TrangChu.html" class="navbar-brand">
+            <img src="../images/logo.png" alt="" class="rounded-circle" style="width: 50px;">
+        </a>
+        <ul class="nav navbar-nav" id="menuChinh">
+            <li class="nav-item"><a href="TrangChu.html" class="nav-link text-white font-weight-bold px-3 py-3">TRANG
+                    CHỦ</a></li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle text-white font-weight-bold px-3 py-3" data-toggle="dropdown">SẢN
+                    PHẨM</a>
+                <ul class="dropdown-menu">
+                    <li class="dropdown-item">
+                        <a href="BoDungCuDaNang.html" class="text-decoration-none">Bộ dụng cụ đa năng</a>
+                    </li>
+                    <li class="dropdown-item">
+                        <a href="CacLoaiMayMoc.html" class="text-decoration-none">Các loại máy móc</a>
+                    </li>
+                    <li class="dropdown-item">
+                        <a href="Thang.html" class="text-decoration-none">Thang nhôm</a>
+                    </li>
+                    <li class="dropdown-item">
+                        <a href="DungCuDo.html" class="text-decoration-none">Dụng cụ đo lường</a>
+                    </li>
+                    <li class="dropdown-item">
+                        <a href="DanhSachSanPham.html" class="text-decoration-none">Xem tất cả sản phẩm</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="nav-item">
+                <a href="GioiThieu.html" class="nav-link text-white font-weight-bold px-3 py-3">GIỚI THIỆU</a>
+            </li>
+        </ul>
+        <ul class="nav navbar-nav" id="menuRight">
+            <li class="nav-item">
+                <a href="GioHang.html" class="nav-link px-2 py-3"><i class="fa-solid fa-cart-arrow-down"></i></a>
+            </li>
+            <li class="nav-item">
+                <a href="Form.html" class="nav-link px-2 py-3">
+                    <i class="fa-solid fa-circle-user"></i> Tài khoản
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="d-flex justify-content-center" id="formDangNhap">
+        <form class="mt-5">
+            <h3 class="text-center font-weight-bold my-5">Đăng nhập</h3>
+            <div class="form-group my-3">
+                <div class="form-control d-flex">
+                    <i class="fa-solid fa-user p-1"></i>
+                    <input type="text" placeholder="Tên đăng nhập" class="border-0 flex-grow-1" id="txtTenDangNhap" style="outline: 0;">
+                </div>
+                <span class="text-danger font-italic" id="errorTenDangNhap"></span>
+            </div>
+            <div class="form-group my-1">
+                <div class="form-control d-flex">
+                    <i class="fa-solid fa-key p-1"></i>
+                    <input id="txtMatKhauDN" type="password" placeholder="Mật khẩu" class="border-0 flex-grow-1"
+                        style="outline: 0;">
+                    <div id="eye">
+                        <i class="fa-solid fa-eye"></i>
+                    </div>
+                </div>
+                <span class="text-danger font-italic" id="errorMatKhauDN"></span>
+            </div>
+            <div class="form-group form-check-inline w-100 justify-content-between my-2">
+                <label for="" class="form-check-label">
+                    <input type="checkbox" class="form-check-input">Ghi nhớ tài khoản
+                </label>
+                <a>Quên mật khẩu?</a>
+            </div>
+            <div class="form-group my-3">
+                <a href="TrangChu.html"><button type="button" class="btn btn-info form-control" id="btnDangNhap">Đăng nhập</button></a>
+            </div>
+            <div class="form-group my-4">
+                <h6 class="text-center">Chưa có tài khoản?</h6>
+            </div>
+            <div class="form-group my-3">
+                <button type="button" id="btnChuyenTrangDangKy" class="form-control">Đăng ký</button>
+            </div>
+        </form>
+    </div>
+
+    <div class="d-flex justify-content-center" id="formDangKy">
+        <form class="mt-5">
+            <h3 class="text-center font-weight-bold my-3">Đăng ký tài khoản</h3>
+            <div class="form-group my-3">
+                <label for="txtTenDangKy">Tên Đăng nhập:</label>
+                <span class="text-danger font-italic" id="errorTenDangKy">(*)</span>
+                <input type="text" placeholder="Vui lòng nhập tên đăng nhập" class="form-control" id="txtTenDangKy">
+            </div>
+            <div class="form-group my-3">
+                <label for="txtMatKhauDK">Mật khẩu:</label>
+                <span class="text-danger font-italic" id="errorMatKhauDK">(*)</span>
+                <div class="form-control d-flex">
+                    <input id="txtMatKhauDK" type="password" placeholder="Vui lòng nhập mật khẩu"
+                        class="border-0 flex-grow-1" style="outline: 0;">
+                    <div id="eye1">
+                        <i class="fa-solid fa-eye"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group my-3">
+                <label for="txtNLMatKhau">Xác nhận mật khẩu:</label>
+                <span class="text-danger font-italic" id="errorNLMatKhau">(*)</span>
+                <div class="form-control d-flex">
+                    <input id="txtNLMatKhau" type="password" placeholder="Vui lòng nhập lại mật khẩu"
+                        class="border-0 flex-grow-1" style="outline: 0;">
+                    <div id="eye2">
+                        <i class="fa-solid fa-eye"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group my-3">
+                <label for="txtSDT">Số điện thoại:</label>
+                <span class="text-danger font-italic" id="errorSDT"></span>
+                <input type="tel" placeholder="Vui lòng nhập số điện thoại" class="form-control" id="txtSDT">
+            </div>
+            <div class="form-group my-3">
+                <label for="txtEmail">Email:</label>
+                <span class="text-danger font-italic" id="errorEmail"></span>
+                <input type="email" placeholder="Vui lòng nhập email" class="form-control" id="txtEmail">
+            </div>
+            <div class="form-group my-4">
+                <a href="TrangChu.html"><button type="button" class="btn btn-info form-control" id="btnDangKy">Đăng ký</button></a>
+            </div>
+        </form>
+    </div>
+
+    <div id="thongTinTaiKhoan" class="container">
+        <div class="row mt-5 bg-light">
+            <h2 class="text-center col-12">THÔNG TIN TÀI KHOẢN</h2>
+            <div class="col-5 d-flex justify-content-center align-items-center">
+                <i class="fa-solid fa-circle-user" style="font-size: 200px;"></i>
+            </div>
+            <div class="col-7 p-5">
+                <h4 class="m-3">Tên đăng nhập:</h4>
+                <h2 class="m-3" id="TTTenDN"></h2>
+                <h4 class="m-3">Số điện thoại:</h4>
+                <h2 class="m-3" id="TTSDT"></h2>
+                <h4 class="m-3">Email:</h4>
+                <h2 class="m-3" id="TTEmail"></h2>
+                <a href="TrangChu.html"><button type="button" id="btnDangXuat" class="btn btn-danger m-3">Đăng Xuất</button></a>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

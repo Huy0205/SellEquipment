@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chi tiết sản phẩm</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../font/css/all.min.css">
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/loadData.js"></script>
+    <script>
+        let ma = localStorage.getItem("maSP")
+        $(document).ready(function(){
+            let ketQua = hienThiChiTietSanPham(ma)
+            $("#content").html(ketQua)
+        })
+    </script>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-md bg-info justify-content-around p-0">
+        <a href="TrangChu.html" class="navbar-brand">
+            <img src="../images/logo.png" alt="" class="rounded-circle" style="width: 50px;">
+        </a>
+        <ul class="nav navbar-nav" id="menuChinh">
+            <li class="nav-item"><a href="TrangChu.html" class="nav-link text-white font-weight-bold px-3 py-3">TRANG
+                    CHỦ</a></li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle text-white font-weight-bold px-3 py-3" data-toggle="dropdown">SẢN
+                    PHẨM</a>
+                <ul class="dropdown-menu">
+                    <li class="dropdown-item">
+                        <a href="BoDungCuDaNang.html" class="text-decoration-none">Bộ dụng cụ đa năng</a>
+                    </li>
+                    <li class="dropdown-item">
+                        <a href="CacLoaiMayMoc.html" class="text-decoration-none">Các loại máy móc</a>
+                    </li>
+                    <li class="dropdown-item">
+                        <a href="Thang.html" class="text-decoration-none">Thang nhôm</a>
+                    </li>
+                    <li class="dropdown-item">
+                        <a href="DungCuDo.html" class="text-decoration-none">Dụng cụ đo lường</a>
+                    </li>
+                    <li class="dropdown-item">
+                        <a href="DanhSachSanPham.html" class="text-decoration-none">Xem tất cả sản phẩm</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="nav-item">
+                <a href="GioiThieu.html" class="nav-link text-white font-weight-bold px-3 py-3">GIỚI THIỆU</a>
+            </li>
+        </ul>
+        <ul class="nav navbar-nav" id="menuRight">
+            <li class="nav-item">
+                <a href="GioHang.html" class="nav-link px-2 py-3"><i class="fa-solid fa-cart-arrow-down"></i></a>
+            </li>
+            <li class="nav-item">
+                <a href="Form.html" class="nav-link px-2 py-3">
+                    <i class="fa-solid fa-circle-user"></i> Tài khoản
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <div class="container" id="content">
+    </div>
+    <div class="container-fluid bg-dark mt-4" id="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-4 text-center text-white">
+                    <h5 class="mt-3">Sản phẩm</h5>
+                    <ul class="list-unstyled">
+                        <li class="mt-2">
+                            <a href="BoDungCuDaNang.html" class="text-decoration-none p-2">Bộ dụng cụ đa năng</a>
+                        </li>
+                        <li class="mt-2">
+                            <a href="CacLoaiMayMoc.html" class="text-decoration-none p-2">Các loại máy móc</a>
+                        </li>
+                        <li class="mt-2">
+                            <a href="Thang.html" class="text-decoration-none p-2">Thang nhôm</a>
+                        </li>
+                        <li class="mt-2">
+                            <a href="DungCuDo.html" class="text-decoration-none p-2">Dụng cụ đo lường</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-4 text-center">
+                    <h5 class="mt-3 text-white">Kết nối với chúng tôi</h5>
+                    <img src="../images/logo.png" alt="logo" class="rounded-circle mt-3" style="width: 70px;">
+                    <div class="row justify-content-center mt-3 border-top border-white p-3">
+                        <a href=""><i class="fa-brands fa-facebook px-3"></i></a>
+                        <a href=""><i class="fa-brands fa-google px-3"></i></a>
+                        <a href=""><i class="fa-brands fa-twitter-square px-3"></i></a>
+                    </div>
+                </div>
+                <div class="col-4 text-center">
+                    <a href="Sitemap.html" class="text-decoration-none">
+                        <h5 class="mt-3">Sitemap</h5>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
